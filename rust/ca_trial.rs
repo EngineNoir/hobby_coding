@@ -41,17 +41,14 @@ fn main() {
       println!("{numbah} same variable outside of block");
 
       // Make variables public by adding pub
-      mod numbers {
-          pub const ZERO: i32 = 0;
-      }
       // mod defines a Module which has its own scope.
-      
-      mod another_scope {
-          use super::numbers::ZERO;
 
-          fn print_zero() {
-              println!("{ZERO} called up from another scope by virtue of being a public variable.");
-          }
+      pub struct Number {
+          pub value: i32,
+      }
 
+      let mut number_3 = Number { value: 0};
+      number_3.value += 1;
+      println!("{}", number_3.value);
 
 }
