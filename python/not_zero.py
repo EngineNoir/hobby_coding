@@ -4,3 +4,5 @@ if not x:
     print("True")
 else:
     print("False")
+
+print("lmao")
